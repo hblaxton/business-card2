@@ -9,6 +9,9 @@ export class BusinessCard2 extends LitElement {
       },
       descript:{
         type: String,
+      },
+      detailsLabel:{
+        type: String,
       }
     }
    
@@ -19,7 +22,7 @@ export class BusinessCard2 extends LitElement {
     .wrapper {
   width: 350px;
   height: 750px;
-  border: 2px solid black;
+  border: 5px outset lightgreen;
   display: inline-flex;
   background-color: green; 
 }
@@ -46,6 +49,9 @@ text-align:center;
   transition: .3s ease-in-out all;
   margin: 10px;
   font-style: normal;
+  color: darkgreen;
+  font-family: "Copperplate", fantasy;
+  -webkit-text-stroke: 0.5px lightgreen;
 }
 
 .buttons button:focus,
@@ -69,6 +75,7 @@ button {
 details {
   margin-left: 24px;
   padding: 20px;
+  color: white;
 }
 .details summary {
   font-size: 20px;
@@ -78,7 +85,7 @@ details {
 
 @media only screen and (max-width: 1200px){
   .wrapper {
-    background-color: pink;
+    background-color: darkslategray;
   }
 }
 @media only screen and (max-width: 600px){
@@ -106,6 +113,7 @@ details {
     super();
     this.name = 'Landscaping business';
     this.descript = 'Such an amazing business';
+    this.detailsLabel = 'What we do:';
   }
 
   render() {
@@ -119,7 +127,7 @@ details {
     <h3>${this.name}</h3>
     <h4>${this.descript}</h4>
   </div>
-  <details class="details">
+  <details class=${this.detailsLabel}>
     <summary>What we do:</summary>
     <div>
       <ul>
