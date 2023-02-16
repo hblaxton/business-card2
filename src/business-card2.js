@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import "@lrnwebcomponents/meme-maker/meme-maker.js";
 const tree = new URL('../assets/tree.jpg', import.meta.url).href;
 export class BusinessCard2 extends LitElement {
   static get properties() {
@@ -21,7 +22,7 @@ export class BusinessCard2 extends LitElement {
     return css`
     .wrapper {
   width: 400px;
-  height: 750px;
+  height: 700px;
   border: 5px outset lightgreen;
   display: inline-flex;
   background-color: green; 
@@ -122,19 +123,16 @@ details {
 
 <div class="wrapper">
 <div class="container">
-  <img class="img" src="${tree}">
+<!-- //  <img class="img" src="${tree}"> -->
+<meme-maker image-url="https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg" top-text="Landscaping Business" bottom-text="We love trees!">
+</meme-maker>
   <div class="header">
-    <h3>${this.name}</h3>
+    <!-- <h3>${this.name}</h3> -->
     <h4>${this.descript}</h4>
   </div>
   <details class=${this.detailsLabel}>
     <summary>What we do:</summary>
-    <div>
-      <ul>
-        <li>Cut grass.</li>
-        <li>Make your lawn pretty :)</li>
-       </ul>
-    </div>
+    <slot> </slot>
     </details>
     </div>
 </div>
