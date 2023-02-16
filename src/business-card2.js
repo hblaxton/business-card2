@@ -20,7 +20,7 @@ export class BusinessCard2 extends LitElement {
   static get styles(){
     return css`
     .wrapper {
-  width: 350px;
+  width: 400px;
   height: 750px;
   border: 5px outset lightgreen;
   display: inline-flex;
@@ -28,8 +28,8 @@ export class BusinessCard2 extends LitElement {
 }
 
 .img {
-  padding: 20px;
-  width: 300px;
+  //padding: 20px;
+  width: 400px;
 text-align:center; 
 }
 
