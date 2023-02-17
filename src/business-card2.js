@@ -21,16 +21,15 @@ export class BusinessCard2 extends LitElement {
   static get styles(){
     return css`
     .wrapper {
-  width: 400px;
-  height: 700px;
+  width: 375px;
+  height: auto;
   border: 5px outset lightgreen;
   display: inline-flex;
   background-color: green; 
 }
 
 .img {
-  //padding: 20px;
-  width: 400px;
+width: 400px;
 text-align:center; 
 }
 
@@ -53,6 +52,7 @@ text-align:center;
   color: darkgreen;
   font-family: "Copperplate", fantasy;
   -webkit-text-stroke: 0.5px lightgreen;
+  font-size: 30px;
 }
 
 .buttons button:focus,
@@ -75,11 +75,11 @@ button {
 
 details {
   margin-left: 24px;
-  padding: 20px;
+  padding: 2px;
   color: white;
 }
 .details summary {
-  font-size: 20px;
+  font-size: 20spx;
   font-weight: bold;
 }
 
@@ -124,10 +124,10 @@ details {
 <div class="wrapper">
 <div class="container">
 <!-- //  <img class="img" src="${tree}"> -->
-<meme-maker image-url="https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg" top-text="Landscaping Business" bottom-text="We love trees!">
+<meme-maker image-url="https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg" top-text="Super cool tree" bottom-text="We love trees!">
 </meme-maker>
   <div class="header">
-    <!-- <h3>${this.name}</h3> -->
+    <h3>${this.name}</h3>
     <h4>${this.descript}</h4>
   </div>
   <details class=${this.detailsLabel}>
