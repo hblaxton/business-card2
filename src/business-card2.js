@@ -75,7 +75,8 @@ button {
 
 details {
   margin-left: 24px;
-  padding: 2px;
+  padding-top: 5px;
+  padding-bottom: 12px;
   color: white;
 }
 .details summary {
