@@ -92,7 +92,7 @@ details {
 }
 @media only screen and (max-width: 600px){
   .wrapper {
-    background-color: purple;
+    background-color: pink;
   }
 }
 @media only screen and (max-width: 425px){
