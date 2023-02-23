@@ -18,6 +18,10 @@ export class BusinessCard2 extends LitElement {
         type: String,
         reflect: true,
         attribute: "accent-color"
+      },
+      opened:{
+        type: Boolean,
+        reflect: true
       }
     }
    
@@ -146,6 +150,18 @@ details {
     this.descript = 'Such an amazing business';
     this.detailsLabel = 'What we do:';
     this.accentColor = null;
+    this.opened = false;
+  }
+
+  toggleEvent(e){
+    const state = this.shadowRoot.querySelector('details').getAttribute('open') === '' ? true : false;
+    this.opened = state;
+    console.log(this.opened);
+  }
+  updated(changedProperties) {
+    changedProperties.forEach((oldValue, propName)=> {
+        console.log(`${propName} changed. oldValue: ${oldValue}`);
+    });
   }
 
   render() {
@@ -161,7 +177,7 @@ details {
     <h3>${this.name}</h3>
     <h4>${this.descript}</h4>
   </div>
-  <details class=${this.detailsLabel}>
+  <details class=${this.detailsLabel} .open="${this.opened}" @toggle="${this.toggleEvent}">
     <summary>What we do:</summary>
     <slot> </slot>
     </details>

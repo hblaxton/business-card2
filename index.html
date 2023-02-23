@@ -79,9 +79,10 @@ const details = document.querySelector('summary');
 
 // toggle the 1ST instance of the stats
 document.querySelector('button[data-toggle-btn]').addEventListener('click', (e) => {
-  const details = document.querySelector('business-card2').shadowRoot.querySelector('details');
- details.toggleAttribute('open')
-  console.log(details);
+  
+  const card = document.querySelector('business-card2');
+  card.opened = !card.opened;
+ 
   
 });
 
@@ -95,7 +96,7 @@ document.querySelector('.duplicate').addEventListener('click', function(e) {
 document.querySelector('.modifytitle').addEventListener('click', function(e) {
   let name = prompt("Name Business....");
   if (name) {
-    document.querySelector('business-card2').shadowRoot.querySelector('.wrapper h3').innerText = name;
+    document.querySelector('business-card2').name = name;
   }
 });
 
@@ -103,8 +104,8 @@ document.querySelector('.modifytitle').addEventListener('click', function(e) {
 document.querySelector('#deletelastcard').addEventListener('click', function(e) {
   let wantsTo = confirm("Are you sure?");
   if (wantsTo) {
-    if (document.querySelector('#app :last-child') !== document.querySelector('business-card2')) {
-      document.querySelector('#app :last-child').remove();      
+    if (document.querySelector('#app business-card2:last-child') !== document.querySelector('business-card2')) {
+      document.querySelector('#app business-card2:last-child').remove();      
     }
     else {
       alert("YOU CAN NOT DELETE MY LANDSCAPING CARD !!!!");
