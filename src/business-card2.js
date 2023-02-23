@@ -13,6 +13,11 @@ export class BusinessCard2 extends LitElement {
       },
       detailsLabel:{
         type: String,
+      },
+      accentColor:{
+        type: String,
+        reflect: true,
+        attribute: "accent-color"
       }
     }
    
@@ -20,6 +25,30 @@ export class BusinessCard2 extends LitElement {
 
   static get styles(){
     return css`
+    :host([accent-color="blue"]) .wrapper{
+      background-color: var(--business-card-accent-color, blue);
+      color: white;
+    }
+    :host([accent-color="yellow"]) .wrapper{
+      background-color:  var(--business-card-accent-color, yellow);
+      color: white;
+    }
+    :host([accent-color="pink"]) .wrapper{
+      background-color:  var(--business-card-accent-color, pink);
+      color: white;
+    }
+    :host([accent-color="orange"]) .wrapper{
+      background-color:  var(--business-card-accent-color, orange);
+      color: white;
+    }
+    :host([accent-color="red"]) .wrapper{
+      background-color:  var(--business-card-accent-color, red);
+      color: white;
+    }
+    :host([accent-color="green"]) .wrapper{
+      background-color:  var(--business-card-accent-color, green);
+      color: white;
+    }
     .wrapper {
   width: 375px;
   height: auto;
@@ -116,6 +145,7 @@ details {
     this.name = 'Landscaping business';
     this.descript = 'Such an amazing business';
     this.detailsLabel = 'What we do:';
+    this.accentColor = null;
   }
 
   render() {

@@ -14,7 +14,28 @@
       padding: 0;
       font-family: sans-serif;
       background-color: #ededed;
-    }
+      }
+
+
+business-card2[accent-color="yellow"] {
+  --business-card-accent-color: yellow;
+}
+business-card2[accent-color="red"] {
+  --business-card-accent-color: red;
+}
+business-card2[accent-color="green"] {
+  --business-card-accent-color: green;
+}
+business-card2[accent-color="blue"] {
+  --business-card-accent-color: blue;
+}
+business-card2[accent-color="pink"] {
+  --business-card-accent-color: pink;
+}
+business-card2[accent-color="orange"] {
+  --business-card-accent-color: black;
+}
+
   </style>
   <title>business-card2</title>
 </head>
@@ -59,13 +80,9 @@ const details = document.querySelector('summary');
 // toggle the 1ST instance of the stats
 document.querySelector('button[data-toggle-btn]').addEventListener('click', (e) => {
   const details = document.querySelector('business-card2').shadowRoot.querySelector('details');
- console.log(details);
-  if (details.getAttribute('open')) {
-    details.removeAttribute('open');
-  }
-  else {
-    details.setAttribute('open','open');    
-  }
+ details.toggleAttribute('open')
+  console.log(details);
+  
 });
 
 // duplicate the 1st item
@@ -95,15 +112,21 @@ document.querySelector('#deletelastcard').addEventListener('click', function(e) 
   }
 });
 
-document.querySelector(".colorchange").addEventListener("click", function (e) {
+const changeColor = document.querySelector(".colorchange");
+changeColor.addEventListener("click", function (e) {
   
-  var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
+  // var letters = '0123456789ABCDEF';
+  //   var color = '#';
+  //   for (var i = 0; i < 6; i++) {
+  //     color += letters[Math.floor(Math.random() * 16)];
+  //   }
     
-    document.querySelector('business-card2').shadowRoot.querySelector('.wrapper').style.backgroundColor = color;
+  //  document.querySelector('business-card2').shadowRoot.querySelector('.wrapper').accentColor = color;
+
+  const colors = ["red", "blue", "green", "pink", "orange", "yellow"]
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.querySelector("business-card2").accentColor = randomColor;
+
 });
 
 
