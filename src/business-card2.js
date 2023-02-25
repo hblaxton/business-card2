@@ -160,7 +160,18 @@ details {
   }
   updated(changedProperties) {
     changedProperties.forEach((oldValue, propName)=> {
-        console.log(`${propName} changed. oldValue: ${oldValue}`);
+        if (propName === 'opened'){
+          this.dispatchEvent(new CustomEvent('opened-changed', 
+          { 
+            composed: true,
+            bubbles: true,
+            cancelable: false,
+            detail: 
+            { value: this[propName] } 
+          }));
+          console.log(`${propName} changed. oldValue: ${oldValue}`);
+        }
+        
     });
   }
 

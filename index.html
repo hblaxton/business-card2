@@ -74,6 +74,14 @@ business-card2[accent-color="orange"] {
   <script type="module" src="./src/business-card2.js"></script>
   <script>
 
+document.body.addEventListener('opened-changed', (e) => {
+  if(e.target === document.querySelector('business-card2')){
+   console.log('opened-changed', e.detail, e.target); 
+   document.querySelector('button[data-toggle-btn]').innerText = e.detail.value ? 'Hide Details' : 'Show Details';
+  
+  }
+  
+});
 
 const details = document.querySelector('summary');
 
