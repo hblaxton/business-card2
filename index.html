@@ -96,7 +96,7 @@ document.querySelector('button[data-toggle-btn]').addEventListener('click', (e) 
 
 // duplicate the 1st item
 document.querySelector('.duplicate').addEventListener('click', function(e) {
-  const itemToClone = document.querySelector('business-card2').cloneNode();
+  const itemToClone = document.querySelector('business-card2').cloneNode(true);
   document.querySelector('#app').appendChild(itemToClone);
 });
 
