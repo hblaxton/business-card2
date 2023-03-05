@@ -80,7 +80,7 @@ text-align:center;
 .header h3,
 .header h4 {
   transition: .3s ease-in-out all;
-  margin: 10px;
+  margin: 11px;
   font-style: normal;
   color: darkgreen;
   font-family: "Copperplate", fantasy;
