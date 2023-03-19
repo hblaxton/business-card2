@@ -41,6 +41,9 @@ business-card2[accent-color="orange"] {
 </head>
 
 <body>
+  
+  <tree-types></tree-types>
+
   <div>
     <p>
        
@@ -70,8 +73,10 @@ business-card2[accent-color="orange"] {
     </div> </business-card2>
     </div>
   
-
-  <script type="module" src="./src/business-card2.js"></script>
+  <script type="module"> 
+  import "./src/business-card2.js";
+  import "./src/tree-types.js";
+  </script>
   <script>
 
 document.body.addEventListener('opened-changed', (e) => {
