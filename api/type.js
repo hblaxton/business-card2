@@ -4,6 +4,7 @@ export default async function handler(request, res) {
 
     const type = [
         {
+            "image": "'https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg'",
             "name": "Landscaping Business",
             "descript": "Such an amazing business",
             "detailsLabel": "what we do"
@@ -13,6 +14,7 @@ export default async function handler(request, res) {
         
         
         {
+            "image": "'https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg'",
             "name": "tree bug killer",
             "descript": "Such an amazing business",
             "detailsLabel": "what we do"
@@ -22,6 +24,7 @@ export default async function handler(request, res) {
         
         
         {
+            "image": "'https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg'",
             "name": "tree life business",
             "descript": "Such an amazing business",
             "detailsLabel": "what we do"

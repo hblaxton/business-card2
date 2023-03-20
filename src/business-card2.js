@@ -146,6 +146,7 @@ details {
   }
   constructor() {
     super();
+    this.image = 'https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg'
     this.name = 'Landscaping business';
     this.descript = 'Such an amazing business';
     this.detailsLabel = 'What we do:';
